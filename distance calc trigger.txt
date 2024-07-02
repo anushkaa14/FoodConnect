@@ -1,0 +1,6 @@
+apexCopy code
+trigger DropOffTrigger on Drop_Off_point__c (before insert) {
+2 for(Drop_Off_point__c Drop : Trigger.new){
+3 Drop.Distance__c = Drop.distance_calculation__c;
+4 }
+5 }
